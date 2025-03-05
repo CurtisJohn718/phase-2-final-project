@@ -1,0 +1,35 @@
+nav {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+nav a {
+    font-size: 24px;
+    text-transform: uppercase;
+}
+  
+  .background-nav {
+    position: fixed; /* Or use 'absolute' if you want it relative to a parent element */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for nav bar */
+    color: white;  /* Set text color to white for contrast */
+    padding: 10px 20px;  /* Add some padding */
+    z-index: 10; /* Ensure the nav bar stays on top */
+    display: flex; /* Flexbox to arrange nav links */
+    justify-content: space-around; /* Space out links */
+    align-items: center; /* Vertically center the links */
+  }
+  
+  .background-nav a {
+    color: white; /* Link text color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 20px; /* Add padding to each link */
+  }
+  
+  .background-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Highlight links on hover */
+    border-radius: 5px; /* Optional: add rounded corners to the hover effect */
+  }

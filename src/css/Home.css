@@ -1,0 +1,25 @@
+
+h2 {
+    clear: both;
+    font-family: p22-mackinac-pro,serif;
+    font-weight: 700;
+    color: #00663a;
+    padding: 0 2rem;
+    font-size: clamp(3.6rem,6vw,5rem);
+    line-height: clamp(4rem,6vw,5rem);
+    letter-spacing: -.03em;
+    margin: 0 0 2rem;
+}
+
+p {
+  font-family: Lexend,sans-serif;
+  line-height: 2.5rem;
+  font-weight: 400;
+  margin: 0 0 2rem;
+  padding: 0 2rem;
+  color: #2a2928;
+}
+
+.calendar-month {
+    background-color: rgb(230, 203, 168);
+}

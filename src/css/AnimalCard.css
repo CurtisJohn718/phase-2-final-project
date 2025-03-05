@@ -1,0 +1,62 @@
+/* CardList.css */
+
+/* Estilos gerais da lista */
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Estilos para cada card */
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* Permite que a div de detalhes fique posicionada sobre o card */
+}
+
+/* Efeito ao passar o mouse sobre o card */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Título do card */
+.card-title {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Descrição do card */
+.card-description {
+  font-size: 1em;
+  color: #666;
+}
+
+/* Estilo para a imagem */
+.card-image {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer; /* Indica que a imagem é clicável */
+}
+
+/* Estilo para a div de detalhes */
+.card-details {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+  display: block;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
