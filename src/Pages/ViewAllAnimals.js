@@ -8,6 +8,7 @@ import '../App.css';
 const ViewAllAnimals = () => {
   const [jsonData, setJsonData] = useState(null);
   const [error, setError] = useState(null);
+  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     fetch("http://localhost:3000/db.json")
@@ -27,6 +28,16 @@ const ViewAllAnimals = () => {
       });
   }, []);
 
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  // Filter animals based on search query (case insensitive)
+  const filteredAnimals = jsonData?.filter((animal) =>
+    animal.Name.toLowerCase().includes(searchQuery.toLowerCase()) // Assuming each animal has a 'name' property
+  );
+
+
   if (error) {
     return <div>Error: {error}</div>;
   }
@@ -39,10 +50,16 @@ const ViewAllAnimals = () => {
     <>
       <Header />
       <br />
-      <p> View All Animals!</p>
-      <br />
+      <p className='emoji-animals'>🦒 🐘 🦁 🐧 🐸 🐙 🐳 🐯 🦋 🐅</p>
+      <input 
+        type="text"
+        placeholder='Search Animals...'
+        value={searchQuery}
+        onChange={handleSearchChange}
+        className="search-bar"
+        />
       <div className="cardAnimalsContainer">
-        {jsonData && jsonData.map((animal) => (
+        {filteredAnimals && filteredAnimals.map((animal) => (
           <AnimalCard showdetails key={animal.ID} animal={animal} />
         ))}
       </div>
