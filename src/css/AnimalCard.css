@@ -11,14 +11,19 @@
 
 /* Estilos para cada card */
 .card {
-  background-color: #e9fbfe;
-  border: 1px solid #e45a47;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f5f2ee;
+  margin: 20px;
+  border: 3px solid #585352;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(200, 177, 177, 0.1);
   width: 250px;
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative; /* Permite que a div de detalhes fique posicionada sobre o card */
+}
+
+.background-color { 
+  background-color:#eef189!important
 }
 
 /* Efeito ao passar o mouse sobre o card */
@@ -27,9 +32,10 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Título do card */
+
 .card-title {
   font-size: 1.5em;
+  font-family: Lexend,sans-serif;
   color: #333;
   margin-bottom: 10px;
 }
@@ -62,3 +68,63 @@
   opacity: 1;
   transition: opacity 0.3s ease;
 }
+
+.emoji-animals {
+  font-size: 2rem; /* Adjust size */
+  line-height: 1;  /* Ensure proper vertical alignment */
+  padding: 5px;    /* Add some space around the emoji */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth hover effect */
+  display: inline-block; /* Display emoji inline with other text */
+
+  transform: scale(1.2); /* Slightly increase size */
+  filter: brightness(1.2); /* Increase brightness */
+
+  font-size: 2.5rem; /* Slightly smaller emoji for buttons */
+  margin-right: 8px; /* Space between emoji and text */
+  transition: transform 0.3s ease-in-out;
+
+  transform: scale(1.1); /* Slight size increase on hover */
+
+  font-size: 3rem; /* Larger size for emphasis */
+  display: flex;
+  justify-content: center; /* Center align emojis */
+  align-items: center;
+  gap: 15px; /* Space between emojis */
+
+  background-color: #ffcc00;
+  border-radius: 50%;
+  padding: 10px;
+  display: inline-block;
+}
+
+.search-bar {
+  display: center; /* Align input and icon or button side by side */
+  justify-content: center; /* Center-align the search bar */
+  margin-top: 20px; /* Add some space from the top */
+
+  width: 300px; /* Set the width of the search bar */
+  padding: 10px 15px; /* Add space inside the search bar */
+  font-size: 1rem; /* Font size for the input text */
+  border: 2px solid #ccc; /* Border color */
+  border-radius: 30px; /* Rounded corners */
+  outline: none; /* Remove the default outline */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  border-color: #007bff; /* Change border color when focused */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a shadow when focused */
+
+  color: #888; /* Lighter color for placeholder text */
+  font-style: italic; /* Italicize placeholder text */
+
+  /* position: absolute; Position icon inside the input field */
+  left: 15px; /* Position it at the start of the input */
+  top: 50%; /* Vertically center the icon */
+  transform: translateY(-50%); /* Adjust for perfect vertical alignment */
+  color: #aaa; /* Light color for the icon */
+  font-size: 1.2rem; /* Icon size */
+  pointer-events: none; /* Prevent icon from blocking interactions */
+
+  outline: none; /* Remove outline when focused */
+
+}
+

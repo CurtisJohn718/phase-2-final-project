@@ -50,10 +50,12 @@ const ViewAllAnimals = () => {
     <>
       <Header />
       <br />
-      <p className='emoji-animals'>🦒 🐘 🦁 🐧 🐸 🐙 🐳 🐯 🦋 🐅</p>
+      <div className="background-color">
+      <p className="emoji-animals">🦒 🐘 🦁 🐧 🐸 🐙 🐳 🐯 🦋 🐅</p>
+      <br />
       <input 
         type="text"
-        placeholder='Search Animals...'
+        placeholder="Search Animals..."
         value={searchQuery}
         onChange={handleSearchChange}
         className="search-bar"
@@ -62,6 +64,8 @@ const ViewAllAnimals = () => {
         {filteredAnimals && filteredAnimals.map((animal) => (
           <AnimalCard showdetails key={animal.ID} animal={animal} />
         ))}
+
+      </div>
       </div>
     </>
   );
