@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Header from '../Components/Header';
 import AnimalCard from '../Components/AnimalCard';
 
+
 import '../css/Home.css';
 
 const Home = () => {
@@ -49,6 +50,8 @@ const Home = () => {
 
   return (
     <>
+      
+      <br />
       <Header />
       <br />
       <div className="calendar-month">
